@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ffff00"
     android:gravity="top"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -24,7 +26,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="아이디" />
+        android:text="아이디"
+        android:layout_marginTop="15dp"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -35,6 +38,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="비밀번호" />
 
     <EditText
@@ -46,6 +50,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="닉네임" />
 
     <EditText
@@ -86,6 +91,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        radi
         android:text="확인"/>
 
 </LinearLayout>
