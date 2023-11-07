@@ -13,11 +13,14 @@
         android:theme="@style/Theme.MyFirstAndroidApp_rollriera"
         tools:targetApi="31">
         <activity
+            android:name=".MassageActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity4"
             android:exported="false" />
         <activity
             android:name=".Activity3"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
