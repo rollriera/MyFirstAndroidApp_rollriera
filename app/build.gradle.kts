@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+
     namespace = "com.example.myfirstandroidapp_rollriera"
     compileSdk = 33
 
