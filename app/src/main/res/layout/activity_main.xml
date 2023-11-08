@@ -8,181 +8,100 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/moveToOtherBtn"
+    <ListView
+        android:id="@+id/studentListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="다른 화면으로 이동"/>
+        android:layout_height="match_parent" />
 
-    <EditText
-        android:id="@+id/messageEdt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="전달할 메세지 입력"/>
-
-    <Button
-        android:id="@+id/sendMessageBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="메세지를 다음 화면으로 전달"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="닉네임"
-        android:layout_marginTop="15dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/oldNickName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="홍길동"
-            android:textSize="17sp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/changeNickNameBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="닉네임 변경"/>
-
-    </LinearLayout>
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="보여줄 문구"/>-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/contentEdt"-->
+    <!--    <Button-->
+<!--        android:id="@+id/moveToOtherBtn"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:hint="아무 문장이나 입력"/>-->
+<!--        android:text="다른 화면으로 이동"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/messageEdt"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="전달할 메세지 입력"/>-->
 
 <!--    <Button-->
-<!--        android:id="@+id/okBtn"-->
+<!--        android:id="@+id/sendMessageBtn"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:text="문장 반영"/>-->
+<!--        android:text="메세지를 다음 화면으로 전달"/>-->
 
-<!--    <TextView-->
-<!--        android:id="@+id/resultTxt"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:gravity="center"-->
-<!--        android:text="입력한 내용이 나올 자리"/>-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical"-->
-<!--        android:gravity="center">-->
-
-<!--        <ImageView-->
-<!--            android:layout_width="120dp"-->
-<!--            android:layout_height="120dp"-->
-<!--            android:src="@drawable/mainlogo"-->
-<!--            android:scaleType="centerInside"-->
-<!--            />-->
-<!--    </LinearLayout>-->
 <!--    <TextView-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:text="아이디"-->
+<!--        android:text="닉네임"-->
 <!--        android:layout_marginTop="15dp"/>-->
 
-<!--    <EditText-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="이메일 양식으로 "-->
-<!--        android:inputType="textEmailAddress"/>-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:text="비밀번호" />-->
-
-<!--    <EditText-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="8글자 이상 입력 "-->
-<!--        android:inputType="textPassword"/>-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:text="닉네임" />-->
-
-<!--    <EditText-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="한 줄로 입력"-->
-<!--        android:singleLine="true"-->
-<!--        android:imeOptions="actionSearch"/>-->
-
-<!--    <RadioGroup-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal">-->
-
-<!--        <RadioButton-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="남성"/>-->
-
-<!--        <RadioButton-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="여성"/>-->
-
-<!--        <RadioButton-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:enabled="false"-->
-<!--            android:text="공개 안함"/>-->
-<!--    </RadioGroup>-->
-
-<!--    <CheckBox-->
-<!--        android:visibility="gone"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:checked="false"-->
-<!--        android:text="이용약관 동의"/>-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="1"/>-->
-
 <!--    <LinearLayout-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:orientation="horizontal">-->
 
-<!--        <Button-->
-<!--            android:id="@+id/OkBtn"-->
+<!--        <TextView-->
+<!--            android:id="@+id/oldNickName"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="홍길동"-->
+<!--            android:textSize="17sp"/>-->
+
+<!--        <TextView-->
 <!--            android:layout_width="0dp"-->
 <!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="확인"/>-->
+<!--            android:layout_weight="1"/>-->
 
 <!--        <Button-->
-<!--            android:id="@+id/cleBtn"-->
-<!--            android:layout_width="0dp"-->
+<!--            android:id="@+id/changeNickNameBtn"-->
+<!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="취소"/>-->
+<!--            android:text="닉네임 변경"/>-->
+
 <!--    </LinearLayout>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="연결할 전화번호"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/phoneNumEdt"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="전화번호 입력"-->
+<!--        android:inputType="phone"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/dialBtn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="전화 연결 (DIAL)"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/callBtn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="전화 연결 (CALL)"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/smsBtn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="문자 전송 화면으로 이동"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/naverWebBtn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="네이버 사이트로 이동"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/kakaoStoreBtn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="카카오 앱 다운로드 화면으로"/>-->
 
 </LinearLayout>
