@@ -8,6 +8,18 @@ class Intent : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+    //    private val changeNickNameLauncher = registerForActivityResult(
+//        ActivityResultContracts.StartActivityForResult()
+//    ) { result ->
+//        if (result.resultCode == Activity.RESULT_OK) {
+//            if (result.data != null) {
+//                val newNickName = result.data?.getStringExtra("newNickName")
+//                // TextView에 새 닉네임을 설정
+//                binding.oldNickName.text = newNickName
+//            }
+//        }
+//    }
+
         // 전화 연결 직전(DIAL)
 //        binding.dialBtn.setOnClickListener {
 //
