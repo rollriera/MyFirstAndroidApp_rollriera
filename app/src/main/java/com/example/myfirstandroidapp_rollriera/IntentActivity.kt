@@ -1,10 +1,9 @@
 package com.example.myfirstandroidapp_rollriera
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 
-class Intent : AppCompatActivity() {
+class IntentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
