@@ -17,15 +17,11 @@ class StudentAdapter(val mContext : Context,
      val inf = LayoutInflater.from(mContext)
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-
         var tempRow = convertView
         if(tempRow == null){
             tempRow = inf.inflate(R.layout.student_list_item, null)
         }
-
         val row = tempRow!!
-
-        val studentData = mList[position]
 
         val nameTxt = row.findViewById<TextView>(R.id.nameTxt)
         val birthYear = row.findViewById<TextView>(R.id.birthYearTxt)
