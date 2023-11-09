@@ -26,10 +26,9 @@ class StudentAdapter(val mContext : Context,
         val nameTxt = row.findViewById<TextView>(R.id.nameTxt)
         val birthYear = row.findViewById<TextView>(R.id.birthYearTxt)
 
-        val caleander = Calendar.getInstance();
-        val nowYear = caleander.get(Calendar.YEAR)
+        var studentData = mList[position]
 
-        var age = nowYear - mList[position].birthYear
+        var age = studentData.resultToAge(mList[position].birthYear)
 
         nameTxt.text = mList[position].name
         birthYear.text = "(${age}세)"
