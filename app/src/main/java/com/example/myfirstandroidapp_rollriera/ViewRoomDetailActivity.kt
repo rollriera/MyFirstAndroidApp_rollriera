@@ -18,15 +18,19 @@ class ViewRoomDetailActivity : AppCompatActivity() {
 
         setContentView(view)
 
-        val roomData = intent.getSerializableExtra("room", Room::class.java)!!
+//        val roomData = intent.getSerializableExtra("room", Room::class.java)!!
+        val roomData = intent.getParcelableExtra("room",Room::class.java)!!
 
-        binding.price.text = roomData.getFormattedPrice()
+        if (roomData != null) {
+            binding.price.text = roomData.getFormattedPrice()
+        }
 
         binding.descriptionTxt.text = roomData.description
 
         binding.roomAddr.text = roomData.addr
 
         binding.floorText.text = roomData.getFormattedFloor()
+
 
     }
 }

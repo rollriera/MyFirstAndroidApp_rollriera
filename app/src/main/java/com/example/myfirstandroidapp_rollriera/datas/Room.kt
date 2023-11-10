@@ -1,15 +1,18 @@
 package com.example.myfirstandroidapp_rollriera.datas
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 import java.io.Serializable
 import java.text.NumberFormat
 import java.util.Locale
 import kotlin.math.abs
 
 //방 표현 데이터클래스
+@Parcelize
 class Room(val price : Int,
            val addr : String,
            val floor : Int,
-           val description : String) : Serializable {
+           val description : String) : Parcelable{
 
     // 가격 가공 함수
     fun getFormattedPrice() : String{
