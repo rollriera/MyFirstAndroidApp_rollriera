@@ -11,8 +11,11 @@ class ViewRoomDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityViewRoomDetailBinding.inflate(layoutInflater)
+
         val view = binding.root
+
         setContentView(view)
 
         val roomData = intent.getSerializableExtra("room", Room::class.java)!!
