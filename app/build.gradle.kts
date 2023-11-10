@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.myfirstandroidapp_rollriera"
-        minSdk = 23
+        minSdk = 33
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
