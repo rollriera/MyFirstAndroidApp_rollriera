@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     // 멤버변수 선언
     val mRoomList = ArrayList<Room>()
 
-
     private lateinit var mRoomAdapter: RoomAdapter
 
     private lateinit var binding: ActivityMainBinding
