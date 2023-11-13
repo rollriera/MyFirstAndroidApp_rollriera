@@ -21,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
 
         myHandler.postDelayed({
                  // 2.5초 후에 실행할 내용 작성(메인화면으로 이동 + 지금 화면 종료)
-            val myIntent = Intent(this,MainActivity::class.java)
+            val myIntent = Intent(this,LoginActivity::class.java)
 
             startActivity(myIntent)
 
