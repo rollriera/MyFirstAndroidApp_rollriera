@@ -1,41 +1,42 @@
 package com.example.myfirstandroidapp_rollriera.adapters
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.example.myfirstandroidapp_rollriera.R
+import com.example.myfirstandroidapp_rollriera.databinding.RoomListItemBinding
 import com.example.myfirstandroidapp_rollriera.datas.Room
 
-class RoomAdapter(val mContext : Context, val resId : Int, val mList : List<Room>) : ArrayAdapter<Room>(mContext, resId, mList) {
+class RoomAdapter(private val roomList : ArrayList<Room>, private val itemClickListener: (Room) -> Unit) :
+    RecyclerView.Adapter<RoomAdapter.ViewHolder>() {
 
-    val inflater = LayoutInflater.from(mContext)
+    inner class ViewHolder(private val binding : RoomListItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: Room) {
+            binding.roomPrice.text = item.price.toString()
+            binding.roomAddr.text = item.addr
+            binding.description.text = item.description
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        var tempRow = convertView
-        if(tempRow == null){
-            tempRow = inflater.inflate(R.layout.room_list_item, null)
+            itemView.setOnClickListener {
+                itemClickListener.invoke(item)
+            }
+
         }
-
-        var row = tempRow!!
-
-        val roomData = mList[position]
-
-
-        val priceText = row.findViewById<TextView>(R.id.roomPrice)
-        val addrAndFloor = row.findViewById<TextView>(R.id.roomAddr)
-        val description = row.findViewById<TextView>(R.id.description)
-
-
-        priceText.text = roomData.getFormattedPrice()
-
-        addrAndFloor.text = "${roomData.addr}, ${roomData.getFormattedFloor()}"
-
-        description.text = roomData.description
-
-        return row
     }
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val binding = RoomListItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return ViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val room = roomList[position]
+        holder.bind(room)
+    }
+
+    override fun getItemCount(): Int {
+        return roomList.size
+    }
 }
