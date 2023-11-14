@@ -7,10 +7,29 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/roomListView"
+    <fragment
+        android:tag="firstFrag"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="150dp"
+        class="com.example.myfirstandroidapp_rollriera.fragments.FirstFragment"/>
 
+    <fragment
+        android:tag="otherFrag"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        class = "com.example.myfirstandroidapp_rollriera.fragments.OtherFragment"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/mainViewPager"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/roomRecycleriew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/room_list_item"/>
 
 </LinearLayout>
