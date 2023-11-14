@@ -1,6 +1,7 @@
 package com.example.myfirstandroidapp_rollriera
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -38,9 +39,12 @@ class LoginActivity : AppCompatActivity() {
             }else{
                 ContextUtil.setIdText(this, "")
             }
+            val result = ContextUtil.getIdText(this)
+            binding.userIdText.text = Editable.Factory.getInstance().newEditable(result)
+
+            val myIntent = Intent(this, MainActivity::class.java)
+            startActivity(myIntent)
         }
-        val result = ContextUtil.getIdText(this)
-        binding.userIdText.text = Editable.Factory.getInstance().newEditable(result)
 
     }
 }
